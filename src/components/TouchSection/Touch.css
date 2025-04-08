@@ -1,0 +1,162 @@
+.touchContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  margin-block: 4rem;
+}
+
+.touchLeft {
+  position: relative;
+  z-index: 4;
+  width: 50%;
+  height: 90%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.touchRight {
+  background-color: #f3f5f7;
+  width: 55%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  padding-left: 5rem;
+  margin-right: 1.5rem;
+}
+
+.touchRightContent {
+  width: 72%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: start;
+  z-index: 3;
+}
+
+.touchHeader {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 35px;
+}
+
+.touchLorem {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.getInTouch {
+  background-color: #4e47e5;
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 10px 40px;
+  font-size: 14px;
+  height: 40px;
+  text-align: center;
+  transition: all 10ms ease-out;
+}
+
+.getInTouch:hover {
+  background-color: #ffffff;
+  color: #4e47e5;
+  border: 1px solid #4e47e5;
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+  .touchContainer {
+    width: 100%;
+    flex-direction: column;
+    padding: 3rem 1rem;
+    height: 100vh;
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  .touchLeft {
+    width: 100%;
+    height: 50%;
+    margin-right: -1rem;
+  }
+
+  .touchRight {
+    position: static;
+    width: 100%;
+    height: 90%;
+    padding: 2rem 1.5rem;
+    margin-top: -1rem;
+    margin-left: 0.4rem;
+  }
+
+  .touchRightContent {
+    width: 90%;
+    gap: 1.5rem;
+  }
+
+  .touchHeader {
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  .touchLorem {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .getInTouch {
+    background-color: #4e47e5;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 10px 40px;
+    font-size: 14px;
+    height: 40px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .touchContainer {
+    width: 100%;
+    flex-direction: column;
+    padding: 3rem 1rem;
+    height: 100vh;
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  .touchLeft {
+    width: 100%;
+    height: 50%;
+    margin-right: -1rem;
+  }
+
+  .touchRight {
+    position: static;
+    width: 100%;
+    height: 90%;
+    padding: 2rem 1.5rem;
+    margin-top: -2rem;
+    margin-left: 0.4rem;
+  }
+
+  .touchRightContent {
+    width: 90%;
+    gap: 1.5rem;
+  }
+
+  .touchLorem {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
