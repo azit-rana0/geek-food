@@ -41,6 +41,19 @@ ul {
     list-style: none;
     color: white;
   }
+
+  .headerList > li:hover {
+    color: #2462eb;
+  }
+  .linkPage {
+    color: #2462eb;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .linkPage2 {
+    color: white;
+  }
 }
 
 .menuButtonContainer {

@@ -1,9 +1,11 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Header from "./components/Header/Header";
 import HeroSection from "./components/HeroSection/Hero";
 import TouchSection from "./components/TouchSection/Touch";
 import Card from "./components/CardSection/Card";
 import Footer from "./components/Footer/Footer";
+import QuotePage from "./components/QuotePage/Main";
 
 const testimonials = [
   {
@@ -39,10 +41,9 @@ const testimonials = [
   },
 ];
 
-function App() {
+function HomePage() {
   return (
     <>
-      <Header />
       <HeroSection />
       <TouchSection />
       <div className="grid-container">
@@ -50,7 +51,22 @@ function App() {
           <Card key={index} {...item} />
         ))}
       </div>
-      <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/quote" element={<QuotePage />} />
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }

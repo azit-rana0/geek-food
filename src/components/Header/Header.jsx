@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { LuMenu } from "react-icons/lu";
 import Button from "../Button/Button";
 import "./Header.css";
@@ -14,9 +14,17 @@ export default function Header() {
           />
           <span>GeekFoods</span>
         </div>
-        <ul>
-          <li>Home</li>
-          <li>Quote</li>
+        <ul className="headerList">
+          <li>
+            <Link className="linkPage" to="/">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link className="linkPage linkPage2" to="/quote">
+              Quote
+            </Link>
+          </li>
           <li>Resturants</li>
           <li>Foods</li>
           <li>Contant</li>
